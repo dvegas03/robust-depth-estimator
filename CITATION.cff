@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use Engine Grounder in your research, please cite it as below."
+type: software
+title: "Engine Grounder: Vision-Language Grounded 3-D Spatial Reasoning Pipeline"
+abstract: >
+  Engine Grounder is an open-source framework for robust depth estimation and
+  3-D spatial reasoning. It implements a novel Semantic-Geometric Decoupling
+  architecture that combines an adaptive bilateral-residual depth filter,
+  Poisson mesh reconstruction, PointNet shape encoding, and a VLM spatial
+  context interface. The adaptive σ(Z) noise model requires no manual sensor
+  calibration and recovers true noise levels directly from depth residuals.
+authors:
+  - family-names: Vegas
+    given-names: David
+    orcid: ""
+repository-code: "https://github.com/dvegas03/robust-depth-estimator"
+license: MIT
+version: "0.1.0"
+date-released: "2024-01-01"
+keywords:
+  - depth estimation
+  - 3D reconstruction
+  - point cloud
+  - spatial AI
+  - vision-language models
+  - computer vision
+  - mixed reality
+  - Apple Silicon
+  - NAIRR

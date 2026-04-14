@@ -1,0 +1,47 @@
+# ── Build & packaging ─────────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Test & coverage ───────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ── IDE & OS ──────────────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Generated artefacts (never commit pipeline outputs) ───────────────────────
+*.html
+*.png
+*.npy
+*.json
+benchmarks/results*.json
+
+# ── Exceptions: tracked assets that happen to be PNG ─────────────────────────
+!assets/*.png
+
+# ── Data directory (large binary blobs — use Git LFS or document separately) ──
+data/

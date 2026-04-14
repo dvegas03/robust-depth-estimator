@@ -1,0 +1,77 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Lint
+        run: ruff check engine_grounder tests benchmarks examples tools
+
+      - name: Format check
+        run: ruff format --check engine_grounder tests benchmarks examples tools
+
+  test:
+    name: Tests (${{ matrix.os }} / Python ${{ matrix.python-version }})
+    needs: lint
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.9", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install core + dev dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[viz,dev]"
+
+      # Apple Silicon / OpenMP safety: prevents PyTorch ↔ Open3D thread clash
+      - name: Run tests
+        env:
+          OMP_NUM_THREADS: "1"
+          KMP_DUPLICATE_LIB_OK: "TRUE"
+        run: pytest tests/ -v --tb=short --ignore=tests/test_mock_stream.py
+        # test_mock_stream.py requires sample_scene data; skipped in CI unless
+        # data is pre-downloaded. All other tests are self-contained.
+
+  typecheck:
+    name: Type check (mypy)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: mypy
+        run: mypy engine_grounder --ignore-missing-imports
