@@ -1,5 +1,5 @@
 """
-Engine Grounder — Comprehensive Benchmark Runner
+Robust Depth Estimator — Comprehensive Benchmark Runner
 =================================================
 
 Sections
@@ -739,7 +739,7 @@ def build_html_report(
         ), row=3, col=3)
 
     fig.update_layout(
-        title=dict(text="Engine Grounder — Benchmark Report",
+        title=dict(text="Robust Depth Estimator — Benchmark Report",
                    font=dict(size=16, color="white"), x=0.5),
         paper_bgcolor="#0d0d0d",
         plot_bgcolor="#0d0d0d",
@@ -759,7 +759,7 @@ def build_html_report(
 # ══════════════════════════════════════════════════════════════════════════════
 
 def main():
-    parser = argparse.ArgumentParser(description="Engine Grounder benchmark runner")
+    parser = argparse.ArgumentParser(description="Robust Depth Estimator benchmark runner")
     parser.add_argument("--skip-bunny", action="store_true",
                         help="Skip the full Bunny pipeline (no data files needed)")
     parser.add_argument("--out", default=None,
@@ -770,7 +770,7 @@ def main():
     out_html = os.path.splitext(out_json)[0] + "_report.html"
 
     print("=" * 60)
-    print("  Engine Grounder — Benchmark Suite")
+    print("  Robust Depth Estimator — Benchmark Suite")
     print("=" * 60)
 
     # A — filter grid sweep

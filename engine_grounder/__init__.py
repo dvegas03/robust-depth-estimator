@@ -1,5 +1,5 @@
 """
-Engine Grounder — Vision-Language Grounded 3-D Spatial Reasoning Pipeline.
+Robust Depth Estimator — Semantic–Geometric Decoupling Framework.
 
 Core public API
 ---------------
@@ -21,7 +21,7 @@ from engine_grounder.streams.sensor_stream import SensorStream
 from engine_grounder.streams.mock_stream import MockStream, BunnyStream
 
 __version__ = "0.1.0"
-__author__ = "David Vegas"
+__author__ = "Danila Kharitonenkov, Vuthea Chheang"
 
 __all__ = [
     # Pipeline

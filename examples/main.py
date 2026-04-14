@@ -46,7 +46,7 @@ def inject_corruption(depth: np.ndarray) -> np.ndarray:
 
 
 def main():
-    print("=== Engine Grounder — Full Pipeline Demo ===\n")
+    print("=== Robust Depth Estimator — Full Pipeline Demo ===\n")
 
     stream = BunnyStream()
     pipe = Pipeline(stream, outlier_k=OUTLIER_K, tau=TAU)

@@ -1,5 +1,5 @@
 """
-Quantitative metric functions for the Engine Grounder pipeline.
+Quantitative metric functions for the Robust Depth Estimator pipeline.
 
 All functions are pure NumPy / SciPy and accept plain arrays.
 No pipeline imports here — this module is dependency-free.

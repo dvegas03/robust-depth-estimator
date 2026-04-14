@@ -1,22 +1,23 @@
 cff-version: 1.2.0
-message: "If you use Engine Grounder in your research, please cite it as below."
+message: "If you use Robust Depth Estimator in your research, please cite it as below."
 type: software
-title: "Engine Grounder: Vision-Language Grounded 3-D Spatial Reasoning Pipeline"
+title: "Robust Depth Estimator: Semantic–Geometric Decoupling Framework"
 abstract: >
-  Engine Grounder is an open-source framework for robust depth estimation and
-  3-D spatial reasoning. It implements a novel Semantic-Geometric Decoupling
-  architecture that combines an adaptive bilateral-residual depth filter,
-  Poisson mesh reconstruction, PointNet shape encoding, and a VLM spatial
-  context interface. The adaptive σ(Z) noise model requires no manual sensor
-  calibration and recovers true noise levels directly from depth residuals.
+  Robust Depth Estimator is an open-source framework implementing Semantic–Geometric
+  Decoupling for robust depth estimation and 3-D spatial reasoning. It combines an
+  adaptive bilateral-residual depth filter, mesh reconstruction, PointNet shape
+  encoding, and a spatial-context fusion interface. The adaptive σ(Z) noise model
+  requires no manual sensor calibration and recovers true noise levels directly
+  from depth residuals.
 authors:
-  - family-names: Vegas
-    given-names: David
-    orcid: ""
+  - family-names: Kharitonenkov
+    given-names: Danila
+  - family-names: Chheang
+    given-names: Vuthea
 repository-code: "https://github.com/dvegas03/robust-depth-estimator"
 license: MIT
 version: "0.1.0"
-date-released: "2024-01-01"
+date-released: "2026-01-01"
 keywords:
   - depth estimation
   - 3D reconstruction
@@ -25,5 +26,5 @@ keywords:
   - vision-language models
   - computer vision
   - mixed reality
-  - Apple Silicon
-  - NAIRR
+  - Semantic-Geometric decoupling
+  - I3D 2026

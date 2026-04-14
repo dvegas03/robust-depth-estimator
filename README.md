@@ -1,6 +1,6 @@
-# Engine Grounder
+# Robust Depth Estimator
 
-**Vision-Language Grounded 3-D Spatial Reasoning Pipeline**
+**Semantic–Geometric Decoupling Framework**
 
 [![CI](https://github.com/dvegas03/robust-depth-estimator/actions/workflows/ci.yml/badge.svg)](https://github.com/dvegas03/robust-depth-estimator/actions/workflows/ci.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
@@ -8,7 +8,7 @@
 
 ---
 
-I designed and implemented Engine Grounder as a production-grade framework for grounding natural-language spatial queries in metric 3-D geometry. The core contribution is a **Semantic-Geometric Decoupling** architecture: sensor noise and geometric structure are estimated jointly and adaptively, so downstream reasoning about object shape and pose is not contaminated by depth sensor artefacts.
+Robust Depth Estimator is a production-grade open-source framework implementing **Semantic–Geometric Decoupling**: sensor noise and geometric structure are estimated jointly and adaptively, so downstream spatial reasoning is not contaminated by depth sensor artefacts.
 
 ## Architecture
 
@@ -157,17 +157,17 @@ pytest tests/ -v
 
 The test suite covers void masking, adaptive σ estimation, bilateral outlier detection, IQR filter, morphological closing, inpainting, bilateral smoothing, full restore pipeline, Z_est extraction, Monte Carlo accuracy, mesh reconstruction, point cloud projector math, shape encoding, shape descriptors, and synthetic data generation.
 
-## Citation
+## Citation (I3D 2026)
 
-If you use Engine Grounder in your research, please cite:
+If you use Robust Depth Estimator in your research, please cite:
 
 ```bibtex
-@software{vegas2024enginegrounder,
-  author  = {Vegas, David},
-  title   = {{Engine Grounder}: Vision-Language Grounded 3-D Spatial Reasoning Pipeline},
-  year    = {2024},
+@inproceedings{kharitonenkov2026robust,
+  author  = {Kharitonenkov, Danila and Chheang, Vuthea},
+  title   = {{Robust Depth Estimator}: Semantic--Geometric Decoupling Framework},
+  booktitle = {Proceedings of I3D},
+  year    = {2026},
   url     = {https://github.com/dvegas03/robust-depth-estimator},
-  license = {MIT}
 }
 ```
 
@@ -175,4 +175,4 @@ Or use the **"Cite this repository"** button on GitHub (powered by `CITATION.cff
 
 ## License
 
-MIT © David Vegas — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE).

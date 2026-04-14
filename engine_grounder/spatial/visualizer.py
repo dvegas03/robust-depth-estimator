@@ -68,7 +68,7 @@ _SCENE = dict(
 def render_pipeline_demo(
     result,
     output_path: str = "pipeline_demo.html",
-    title: str = "Engine Grounder — Full Pipeline Demo",
+    title: str = "Robust Depth Estimator — Full Pipeline Demo",
 ):
     """
     Build a 6-panel Plotly HTML from a ``PipelineResult`` dataclass.

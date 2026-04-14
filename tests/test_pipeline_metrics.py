@@ -1,5 +1,5 @@
 """
-Metric-threshold tests for the Engine Grounder pipeline.
+Metric-threshold tests for the Robust Depth Estimator pipeline.
 
 Unlike the functional tests in test_depth_filter.py (which test correctness),
 these tests assert *quantitative performance bounds* — they fail if the

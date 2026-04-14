@@ -3,12 +3,15 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "engine-grounder"
+name = "robust-depth-estimator"
 version = "0.1.0"
-description = "Vision-Language grounded 3-D spatial reasoning pipeline with adaptive depth filtering"
+description = "Robust Depth Estimator: Semantic–Geometric Decoupling framework"
 readme = "README.md"
 license = { file = "LICENSE" }
-authors = [{ name = "David Vegas", email = "dvegas03@example.com" }]
+authors = [
+    { name = "Danila Kharitonenkov" },
+    { name = "Vuthea Chheang" },
+]
 requires-python = ">=3.9"
 keywords = ["depth-estimation", "point-cloud", "3d-reconstruction", "computer-vision", "spatial-ai"]
 classifiers = [
