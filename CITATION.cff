@@ -1,30 +1,41 @@
 cff-version: 1.2.0
-message: "If you use Robust Depth Estimator in your research, please cite it as below."
-type: software
-title: "Robust Depth Estimator: Semantic–Geometric Decoupling Framework"
-abstract: >
-  Robust Depth Estimator is an open-source framework implementing Semantic–Geometric
-  Decoupling for robust depth estimation and 3-D spatial reasoning. It combines an
-  adaptive bilateral-residual depth filter, mesh reconstruction, PointNet shape
-  encoding, and a spatial-context fusion interface. The adaptive σ(Z) noise model
-  requires no manual sensor calibration and recovers true noise levels directly
-  from depth residuals.
+message: "If you use Robust Depth Estimator in your research, please cite this paper."
+type: conference-paper
+title: "Semantic-Geometric Decoupling for Universal Spatial Anchoring in Extended Reality"
 authors:
   - family-names: Kharitonenkov
     given-names: Danila
+  - family-names: Miao
+    given-names: Haichao
   - family-names: Chheang
     given-names: Vuthea
-repository-code: "https://github.com/dvegas03/robust-depth-estimator"
-license: MIT
-version: "0.1.0"
-date-released: "2026-01-01"
+year: 2026
+doi: 10.1145/3807895.3807934
+url: "https://doi.org/10.1145/3807895.3807934"
+collection-title: "Companion Proceedings of the Symposium on Interactive 3D Graphics and Games"
+conference-series: "I3D Companion '26"
+publisher: "Association for Computing Machinery"
+address: "New York, NY, USA"
+isbn: "9798400726675"
+abstract: >
+  The Vision Language Models (VLMs) demonstrate remarkable performance in semantic
+  reasoning tasks. However, it is still challenging for them to fully understand 3D
+  spatial environment. Trained on 2D data, the model does not understand the
+  relationship between positions and the first-person viewpoint, leading to viewpoint
+  confusion, which is especially evident during egocentric tasks. The VLMs use 2D
+  image Red-Green-Blue channel (RGB) pattern matching instead of actual point cloud
+  coordinates for distance calculations. This modality could prevent the model’s 3D
+  space geometry understanding, and leads to metric hallucination, as the model
+  guesses the distance without mathematical calculations. In addition, the
+  industrial environment poses a challenge for consumer-grade depth sensors and SLAM
+  libraries. In this work, we propose a Semantic Geometric Decoupling framework to
+  address these challenges. This framework decouples the visual reasoning from the
+  statistical depth filter, providing the necessary deterministic link for
+  high-performance safety and reliability. The aim is to develop a universal spatial
+  cursor that reliably anchors VLM detections into physical 3D space. This approach
+  enables robust real-time spatial understanding for eXtended Reality (XR)
+  applications and opens new research directions at the intersection of VLMs and XR.
 keywords:
-  - depth estimation
-  - 3D reconstruction
-  - point cloud
-  - spatial AI
-  - vision-language models
-  - computer vision
-  - mixed reality
-  - Semantic-Geometric decoupling
-  - I3D 2026
+  - Extended Reality
+  - Geometric Decoupling
+  - Object Detection

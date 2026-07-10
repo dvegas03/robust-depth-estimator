@@ -157,17 +157,25 @@ pytest tests/ -v
 
 The test suite covers void masking, adaptive σ estimation, bilateral outlier detection, IQR filter, morphological closing, inpainting, bilateral smoothing, full restore pipeline, Z_est extraction, Monte Carlo accuracy, mesh reconstruction, point cloud projector math, shape encoding, shape descriptors, and synthetic data generation.
 
-## Citation (I3D 2026)
+## Citation
 
 If you use Robust Depth Estimator in your research, please cite:
 
 ```bibtex
-@inproceedings{kharitonenkov2026robust,
-  author  = {Kharitonenkov, Danila and Chheang, Vuthea},
-  title   = {{Robust Depth Estimator}: Semantic--Geometric Decoupling Framework},
-  booktitle = {Proceedings of I3D},
-  year    = {2026},
-  url     = {https://github.com/dvegas03/robust-depth-estimator},
+@inproceedings{10.1145/3807895.3807934,
+  author    = {Kharitonenkov, Danila and Miao, Haichao and Chheang, Vuthea},
+  title     = {Semantic-Geometric Decoupling for Universal Spatial Anchoring in Extended Reality},
+  year      = {2026},
+  isbn      = {9798400726675},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3807895.3807934},
+  doi       = {10.1145/3807895.3807934},
+  booktitle = {Companion Proceedings of the Symposium on Interactive 3D Graphics and Games},
+  articleno = {13},
+  numpages  = {2},
+  keywords  = {Extended Reality, Geometric Decoupling, Object Detection},
+  series    = {I3D Companion '26}
 }
 ```
 
